@@ -4,7 +4,7 @@
 	<meta name="description" content="">
 	<meta name="author" content="">
 	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, user-scalable=no">
+	<meta name="viewport" content="width=device-width">
 	<!-- Le styles -->
 	<style>
 		body { 
@@ -20,13 +20,23 @@
 			margin-left: 20px;
 		}
 
-		/* latest tracks */
+		/* =================== */
+		/* LATEST TRACK STYLES */
+		
 		#latest_track {
+			/* 
+			   The width of the image returned in the script
+			   is 300x300, but there are larger alternatives.
+			   
+			   Width and height should have equal values.
+			*/
+			max-width: 300px;   /* @editable */
+			max-height: 300px;  /* @editable */
+			
 			position: relative;
 			float: left;
-			/* width of image returned */
-			width: 300px;
-			height: 300px;
+			width: 100%;
+			height: 100%;
 		}
 
 		#latest_track img {
@@ -37,14 +47,30 @@
 		}
 
 		#latest_track a {
-			font-size: 19px;
+			/*
+			   Adjust font styles
+			*/
+			font-size: 19px;                /* @editable */
+			font-family: Arial, sans-serif; /* @editable */
+			top: 20px;                      /* @editable */
+			color: #FFF;                    /* @editable */
+			padding: 0 20px;                /* @editable */
+			text-decoration: none;          /* @editable */
+			text-align: left;               /* @editable */
+
 			position: absolute;
-			font-family: Arial, sans-serif;
-			top: 20px;
-			color: #FFF;
-			padding: 0 20px;
-			text-decoration: none;
-			text-align: left;
+			display: block;
+		}
+
+		#latest_track .timeago {
+			/*
+			   Adjust timestamp styles
+			*/
+			font-size: 10px;    /* @editable */
+			font-style: italic; /* @editable */
+			color: #fff;        /* @editable */
+			margin-top: 5px;    /* @editable */
+			
 			display: block;
 		}
 
@@ -52,16 +78,7 @@
 			font-weight: bold;
 		}
 
-		#latest_track .timeago {
-			margin-top: 5px;
-			display: block;
-			font-size: 10px;
-			font-style: italic;
-			color: #fff;
-		}
-
 	</style>
-
 </head>
 <body>
 	<div class="container">
