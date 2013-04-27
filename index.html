@@ -1,0 +1,87 @@
+<html>
+<head>
+	<title>Lastest track Last.fm</title>
+	<meta name="description" content="">
+	<meta name="author" content="">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no">
+	<!-- Le styles -->
+	<style>
+		body { 
+			padding: 20px;
+			font-family: Arial, sans-serif;
+			font-size: 13px;
+		}
+
+		p {
+			color: #ccc;
+			float: left;
+			width: 300px;
+			margin-left: 20px;
+		}
+
+		/* latest tracks */
+		#latest_track {
+			position: relative;
+			float: left;
+			/* width of image returned */
+			width: 300px;
+			height: 300px;
+		}
+
+		#latest_track img {
+			width: 100%;
+			position: absolute;
+			left: 0;
+			top: 0;
+		}
+
+		#latest_track a {
+			font-size: 19px;
+			position: absolute;
+			font-family: Arial, sans-serif;
+			top: 20px;
+			color: #FFF;
+			padding: 0 20px;
+			text-decoration: none;
+			text-align: left;
+			display: block;
+		}
+
+		#latest_track .artist {
+			font-weight: bold;
+		}
+
+		#latest_track .timeago {
+			margin-top: 5px;
+			display: block;
+			font-size: 10px;
+			font-style: italic;
+			color: #fff;
+		}
+
+	</style>
+
+</head>
+<body>
+	<div class="container">
+		<div id="latest_track"></div>
+		<p>Keep in mind this feed is being scobbled from Spotify via Last.fm, not all tracks have album covers - in which case you may see a dummy cover.</p>
+	</div>
+
+	<script src="//code.jquery.com/jquery.min.js"></script>
+	<script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.0.0/moment.min.js"></script>
+	<script src="lastfm-parser.js"></script>
+	<script type="text/javascript">
+	  var _gaq = _gaq || [];
+	  _gaq.push(['_setAccount', 'UA-4714937-19']);
+	  _gaq.push(['_trackPageview']);
+
+	  (function() {
+	    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+	    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+	    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+	  })();
+	</script>
+</body>
+</html>
